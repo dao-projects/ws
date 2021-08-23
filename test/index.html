@@ -98,10 +98,10 @@
       };
 
       setInterval(function () {
-          const t=new Date().getTime()
-          ws.send(t);
-          addLog(`发送消息: ${t}`, "cadetblue");
-        }, 5000);
+        const t = new Date().getTime();
+        ws.send(t);
+        addLog(`发送消息: ${t}`, "cadetblue");
+      }, 5000);
     </script>
   </body>
 </html>

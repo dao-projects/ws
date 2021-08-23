@@ -1,6 +1,6 @@
 {
   "name": "@daoxin/ws",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一款基于WebSocket封装实现库",
   "directories": {
     "lib": "lib"

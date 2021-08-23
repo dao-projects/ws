@@ -1,4 +1,4 @@
-import EventCenter from './EventCenter';
+import EventCenter from "./EventCenter";
 /**
  * `WS` constructor.
  *
@@ -57,7 +57,7 @@ class WS {
       const data = JSON.parse(event.data);
       this.eventCenter.emit(data.type || data.code, data.data);
     } catch (error) {
-      this.eventCenter.emit('code',event.data || event);
+      this.eventCenter.emit("code", event.data || event);
       console.log(error, "error");
     }
   };

@@ -1,11 +1,3 @@
-/*
- * @Descripttion: This is descripttion
- * @version: 0.0.1
- * @Author: liuhb
- * @Date: 2021-08-23 13:47:14
- * @LastEditors: liuhb
- * @LastEditTime: 2021-08-23 16:46:28
- */
 const path = require("path");
 module.exports = {
   mode: "production",
