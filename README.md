@@ -11,7 +11,7 @@ npm install --save @daoxin/ws
 
 # Usage(使用)
 //浏览器
-<script src="//unpkg.com/@daoxin/ws@1.0.0/index.js"></script>
+<script src="https://unpkg.com/@daoxin/ws"></script>
 
 //ES6
 import WS from '@daoxin/ws'
