@@ -65,9 +65,6 @@
         addLog("连接成功", "cadetblue");
         addLog("发送消息: test", "cadetblue");
         ws.send("test");
-        setInterval(function () {
-          ws.send(new Date().getTime());
-        }, 3000);
         setTimeout(() => {
           addLog(
             `等待 ${ws.options.pingTimeout} ms will hava '${ws.options.pingMsg}'`,
@@ -99,6 +96,12 @@
       document.getElementById("o").onclick = function () {
         ws.start();
       };
+
+      setInterval(function () {
+          const t=new Date().getTime()
+          ws.send(t);
+          addLog(`发送消息: ${t}`, "cadetblue");
+        }, 5000);
     </script>
   </body>
 </html>
