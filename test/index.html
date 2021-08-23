@@ -8,6 +8,8 @@
     <style>
       .logs {
         padding: 40px 0 0 40px;
+        height: 500px;
+        overflow: auto;
       }
 
       .logs div {
@@ -32,6 +34,10 @@
     <script src="../lib/index.js"></script>
   </head>
   <body>
+    <div>
+      <button id="c">手动关闭</button>
+      <button id="o">手动开启</button>
+    </div>
     <div class="logs" id="logs"></div>
     <script>
       const $logs = document.getElementById("logs");
@@ -59,9 +65,9 @@
         addLog("连接成功", "cadetblue");
         addLog("发送消息: test", "cadetblue");
         ws.send("test");
-        setInterval(function(){
+        setInterval(function () {
           ws.send(new Date().getTime());
-        },3000)
+        }, 3000);
         setTimeout(() => {
           addLog(
             `等待 ${ws.options.pingTimeout} ms will hava '${ws.options.pingMsg}'`,
@@ -86,6 +92,12 @@
       ws.onreconnect = function () {
         addLog(`重连中...`, "chocolate");
         addLog(`提示:如果您的网络关闭，请打开网络，重新连接将成功  `, "brown");
+      };
+      document.getElementById("c").onclick = function () {
+        ws.close();
+      };
+      document.getElementById("o").onclick = function () {
+        ws.start();
       };
     </script>
   </body>
